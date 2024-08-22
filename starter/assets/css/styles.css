@@ -3,7 +3,6 @@
 :root {
     --light-color: #d8d8d8;
     --dark-color: #060606;
-    --number-of-cols: 4;
 }
 
 *,
@@ -13,11 +12,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     font-size: 62.5%;
 }
-
 body {
     background-color: var(--dark-color);
     font-family: "Poppins", sans-serif;
@@ -38,4 +35,88 @@ ul {
 img {
     display: block;
     max-width: 100%;
+}
+.showcase{
+    position: relative;
+    height: 100vh;
+    padding: 2rem;
+    text-align: center;
+    isolation: isolate;
+}
+.showcase::before
+{
+    content: '';
+    position: fixed;
+    top: -150%;
+    left: -100%;
+    z-index: -1;
+    width: 350%;
+    height: 350%;
+    background-image:url('../images/grain.png');
+    opacity: .25;
+}
+.logo-image{
+    width: 3.5rem;
+    margin-inline: auto;
+}
+
+.navbar
+{
+    padding-block: 1.5rem;
+}
+
+.navbar ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem; 
+}
+
+/* Utility Classes  */
+.sm-hidden
+{
+    display: none;
+}
+.title
+{
+    font-size: 11vw;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.subtitle{
+    font-size: 4vw;
+    padding-bottom: 2rem;
+}
+.description
+{
+    padding-block: 3rem;
+}
+.cta
+{
+    display: block;
+    padding-bottom: 1rem;
+}
+.shape{
+    position: absolute;
+    bottom: 10vh;
+    left: 25vh;
+    z-index: -1;
+    width: 10vw;
+    opacity: .25;
+    user-select: none;      /*user cannot highlight the shape */
+    -webkit-user-drag:none;
+}
+.shape-md
+{
+    top: 2.5vw;
+    left: 2.5vw;
+    width: 15vw;
+}
+.shape-lg
+{
+    top: 25vh;
+    right: -10vw;
+    left: auto;
+    width:80vw;
 }
