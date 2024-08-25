@@ -120,3 +120,77 @@ img {
     left: auto;
     width:80vw;
 }
+
+@media screen and (min-width: 64em)
+{
+    .showcase,
+    .showcase >*:not(.link)
+    {
+        padding: 0;
+    }
+    .showcase{
+        text-align: left;
+        display: grid;
+        grid-template-columns: 
+        10rem 12rem 10rem 1fr;
+        grid-template-rows: 8rem
+        min-content min-content 1fr 5rem;
+        grid-template-areas: "logo ... ... navbar dashboard"
+        "... ... ... title title"
+        "... ... ... ... subtitle"
+        "... newsletter ... description cta"
+        "... ... year name ..."
+        ;
+    }
+    .logo{
+        grid-area: logo;
+        margin: auto;
+    }
+    .navbar
+    {
+        grid-area: navbar;
+    }
+    .link-hover
+    {
+        text-decoration: 
+        underline;
+    }
+    .link-dashboard{
+        grid-area: dashboard;
+    }
+    .title
+    {
+        grid-area: title;
+        line-height: 1;
+        pointer-events: none;
+    }
+    .subtitle
+    {
+        grid-area: subtitle;
+        line-height: 1;
+        margin-top: .5rem;
+    }
+    .vertical-text{
+        grid-area: newsletter;
+        font-size: 3vw;
+        text-transform: 
+        uppercase;
+        justify-self: end;
+    }
+    .vertical-text-inner
+    {
+        writing-mode:
+        vertical-lr;
+        transform: rotate(180deg);
+    }
+    .description
+    {
+        grid-area: 
+        description;
+        max-width: 80%;
+    }
+    .vertical-center {
+        display: flex;
+        align-self: center;
+    }
+}
