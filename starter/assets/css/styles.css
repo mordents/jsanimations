@@ -193,4 +193,19 @@ img {
         display: flex;
         align-self: center;
     }
+    .cta
+    {
+        grid-area: cta;
+        text-align: center;
+        font-size: 5vw;
+        line-height: 8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    /* Utility Classes  */
+    .sm-hidden
+    {
+        display: none;
+    }/* Utility Classes  */
+
 }
